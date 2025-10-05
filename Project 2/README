@@ -1,0 +1,29 @@
+
+https://drive.google.com/drive/folders/10mMa67mnY08htR4bSzazmM1Ys9R4gQD9?usp=sharing
+# Plant Disease Detection Model
+
+A deep learning-based computer vision system for automatically detecting and classifying plant diseases from leaf images using PyTorch and Convolutional Neural Networks (CNNs).
+
+## 📋 Project Overview
+
+This project implements a neural network model that can classify plant diseases with **99.4% accuracy** on the test set. The model takes plant leaf images as input and predicts the disease category, enabling early detection and treatment of plant diseases.
+
+## 🚀 Features
+
+- **High Accuracy**: Achieved 99.4% test accuracy on plant disease classification
+- **Deep Learning**: Implemented using PyTorch with custom CNN architecture
+- **GPU Acceleration**: Optimized for training on GPU (T4) for faster computation
+- **Data Preprocessing**: Comprehensive image transformations and normalization
+- **Modular Design**: Clean, well-structured code for easy understanding and extension
+
+## 🛠️ Technical Implementation
+
+### Model Architecture
+```python
+Sequential(
+    Conv2d(3, 32, kernel_size=3, padding=1),
+    ReLU(),
+    MaxPool2d(kernel_size=2, stride=2),
+    Flatten(),
+    Linear(32*64*64, 3)
+)
